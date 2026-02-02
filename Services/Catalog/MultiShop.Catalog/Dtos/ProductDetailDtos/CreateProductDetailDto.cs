@@ -4,5 +4,7 @@
     {
         public string ProductDetailInformation { get; set; }
         public string ProductDetailDesc { get; set; }
+        public string ProductId { get; set; }
+
     }
 }
