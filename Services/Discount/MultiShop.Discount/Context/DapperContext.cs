@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using MultiShop.Discount.Entities;
+using System.Data;
 
 namespace MultiShop.Discount.Context
 {
@@ -12,9 +15,7 @@ namespace MultiShop.Discount.Context
             _configuration = configuration;
             _connectionString = _configuration.GetConnectionString("Default");
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder);
-        }
+        public DbSet<Coupon> Coupons { get; set; }
+        public IDbConnection CreateConnection() => new SqlConnection(_connectionString);
     }
 }
