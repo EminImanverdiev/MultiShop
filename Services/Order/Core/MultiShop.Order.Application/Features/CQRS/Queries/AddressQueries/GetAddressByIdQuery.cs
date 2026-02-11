@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MultiShop.Order.Application.Features.CQRS.Queries.AddressQueries
+{
+    public class GetAddressByIdQuery
+    {
+        public GetAddressByIdQuery(int id)
+        {
+            Id = id;
+        }
+
+        public int Id { get; set; }
+    }
+}
