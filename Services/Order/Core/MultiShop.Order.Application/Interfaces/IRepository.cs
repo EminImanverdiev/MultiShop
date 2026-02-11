@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MultiShop.Order.Application.Interfaces
 {
-    internal interface IRepository<T> 
+    public interface IRepository<T> 
         where T : class
     {
         Task<T> GetByIdAsync(int id);
