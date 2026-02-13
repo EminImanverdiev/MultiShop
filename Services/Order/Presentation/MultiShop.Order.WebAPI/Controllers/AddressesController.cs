@@ -55,4 +55,5 @@ namespace MultiShop.Order.WebAPI.Controllers
             await _removeAddressCommandHandler.Handle(new DeleteAddressCommand(id));
             return Ok();
         }
+    }
 }

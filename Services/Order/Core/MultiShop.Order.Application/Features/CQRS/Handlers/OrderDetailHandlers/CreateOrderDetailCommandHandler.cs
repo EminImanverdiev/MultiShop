@@ -7,11 +7,11 @@ using System.Text;
 
 namespace MultiShop.Order.Application.Features.CQRS.Handlers.OrderDetailHandlers
 {
-    public class CreateOrderDetailHandler
+    public class CreateOrderDetailCommandHandler
     {
         private readonly IRepository<OrderDetail> _repository;
 
-        public CreateOrderDetailHandler(IRepository<OrderDetail> repository)
+        public CreateOrderDetailCommandHandler(IRepository<OrderDetail> repository)
         {
             _repository = repository;
         }
